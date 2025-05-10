@@ -10,14 +10,6 @@ This repository is built to simulate real-world GitHub collaboration workflows. 
 
 ---
 
-## 🎥 Demo
-
-![GitHub Workflow Demo](https://user-images.githubusercontent.com/your-gif-link.gif)
-
-> 💡 *Replace the link above with your actual GIF (hosted on GitHub, GIPHY, or Imgur)*
-
----
-
 ## 🚀 Get Started
 
 ```bash
