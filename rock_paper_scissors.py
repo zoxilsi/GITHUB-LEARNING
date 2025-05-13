@@ -23,21 +23,29 @@ def decide_winner(user, computer):
     else:
         return "Computer wins!"
 
-# TODO: Keep score between rounds
-# TODO: Allow multiple rounds with option to quit
-# TODO: Add colored output (green = win, red = lose, yellow = draw)
-# TODO: Add test cases
-# TODO: Add a GUI version using Tkinter
-
 def main():
-    print("Welcome to Rock Paper Scissors Game!")
-    user_choice = get_user_choice()
-    if user_choice is None:
-        return
-    computer_choice = get_computer_choice()
-    print(f"Computer chose: {computer_choice}")
-    result = decide_winner(user_choice, computer_choice)
-    print(result)
+    print("🎮 Welcome to Rock Paper Scissors Game!")
+    
+    while True:
+        user_choice = get_user_choice()
+        if user_choice is None:
+            continue
+        
+        computer_choice = get_computer_choice()
+        print(f"💻 Computer chose: {computer_choice}")
+        result = decide_winner(user_choice, computer_choice)
+        print(result)
+
+        # Ask if the user wants to play again
+        while True:
+            again = input("Play again? (Y/N): ").strip().lower()
+            if again in ['y', 'yes']:
+                break  # Start a new round
+            elif again in ['n', 'q', 'no']:
+                print("👋 Thanks for playing!")
+                return
+            else:
+                print("❗ Invalid input. Please enter 'Y' to play again or 'N' to quit.")
 
 if __name__ == "__main__":
     main()
